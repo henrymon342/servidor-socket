@@ -1,12 +1,20 @@
-const http = require('./app');
+// const http = require('./app');
+
+// const port = process.env.PORT || 3000
+
+// http.listen(port, () => {
+//     console.log('server is running on port', port);
+// });
+
+const express = require("express")
+const app = express()
 
 const port = process.env.PORT || 3000
 
-http.listen(port, () => {
-    console.log('server is running on port', port);
-});
+app.listen(port)
 
-// const express = require("express")
-// const app = express()
+app.get("/", ( req, res) => {
+    res.send("pagina de inicio")
+})
 
-// const port = process.env.PORT || 3000
+console.log("Listen on port "+ port);
