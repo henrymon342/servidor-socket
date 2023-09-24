@@ -9,7 +9,7 @@ module.exports = (http) => {
             origin: "http://localhost:5173",
             methods: ["GET", "POST"],
             transports: ['websocket', 'polling'],
-            credentials: false
+            credentials: true
         },
         allowEIO3: true
     });
