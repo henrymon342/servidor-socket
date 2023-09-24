@@ -6,7 +6,7 @@ module.exports = (http) => {
             
         // }
         cors: {
-            origin: "*",
+            origin: "http://localhost:5173",
             methods: ["GET", "POST"],
             transports: ['websocket', 'polling'],
             credentials: true
