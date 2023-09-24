@@ -1,10 +1,17 @@
 module.exports = (http) => {
     const io = require('socket.io')(http,{
-        cors: {
-            // origin: ["http://localhost:5173"],
-            origin: "*",
+        // cors: {
+        //     // origin: ["http://localhost:5173"],
+        //     origin: "*",
             
-          }
+        // }
+        cors: {
+            origin: "*",
+            methods: ["GET", "POST"],
+            transports: ['websocket', 'polling'],
+            credentials: true
+        },
+        allowEIO3: true
     });
 
     io.on('connection', (socket) => {
